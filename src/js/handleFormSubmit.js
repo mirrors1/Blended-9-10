@@ -1,3 +1,6 @@
+import { nanoid } from 'nanoid';
+import { addTaskToLocalStorage } from './localStorageAPI';
+
 export function handleFormSubmit(evt) {
   evt.preventDefault();
   const taskName = evt.currentTarget.elements.taskName.value.trim();
@@ -6,6 +9,7 @@ export function handleFormSubmit(evt) {
     alert('Введіть данні у всі поля');
     return;
   }
-  const newTask = { taskName, taskText };
-  console.log(newTask);
+  const newTask = { id: nanoid(), taskName, taskText };
+  addTaskToLocalStorage(newTask);
+  evt.currentTarget.reset();
 }

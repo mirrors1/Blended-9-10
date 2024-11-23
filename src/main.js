@@ -21,6 +21,9 @@
 
 import { handleFormSubmit } from './js/handleFormSubmit';
 
+import { initStorage } from './js/localStorageAPI';
+initStorage();
+
 const formEl = document.querySelector('#task-form');
 
 formEl.addEventListener('submit', handleFormSubmit);
