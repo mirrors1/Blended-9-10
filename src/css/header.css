@@ -1,0 +1,31 @@
+.header {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color: rgb(23, 115, 253);
+}
+
+.header-container {
+  display: flex;
+  justify-content: center;
+}
+
+.header-form {
+  display: flex;
+  gap: 15px;
+}
+
+.header-form-input {
+  height: 40px;
+  padding-left: 5px;
+  border-radius: 4px;
+  border: 2px solid rgb(229, 255, 0);
+}
+
+.header-form-btn {
+  border-radius: 4px;
+  border: 2px solid rgb(229, 255, 0);
+
+  font-size: 20px;
+  font-weight: 500;
+  background-color: rgb(245, 245, 245);
+}

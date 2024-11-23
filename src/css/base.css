@@ -1,0 +1,28 @@
+.tasks-list {
+  padding-top: 30px;
+
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+
+  list-style-type: none;
+}
+
+.task-list-item {
+  display: flex;
+  width: calc(25% - 11.25px);
+  background-color: #fdfdfd;
+  border: 1px solid #00f;
+  border-radius: 4px;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  gap: 10px;
+}
+
+.task-list-item-btn {
+  align-self: flex-end;
+  border-radius: 4px;
+  border: 2px solid rgb(255, 0, 0);
+  background-color: rgb(245, 245, 245);
+}

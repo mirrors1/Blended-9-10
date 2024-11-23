@@ -1,0 +1,4 @@
+const newTask = {
+  taskName,
+  taskText,
+};
