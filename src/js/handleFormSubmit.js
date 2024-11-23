@@ -1,5 +1,6 @@
 import { nanoid } from 'nanoid';
 import { addTaskToLocalStorage } from './localStorageAPI';
+import { renderTask } from './renderTask';
 
 export function handleFormSubmit(evt) {
   evt.preventDefault();
@@ -12,4 +13,5 @@ export function handleFormSubmit(evt) {
   const newTask = { id: nanoid(), taskName, taskText };
   addTaskToLocalStorage(newTask);
   evt.currentTarget.reset();
+  renderTask();
 }
