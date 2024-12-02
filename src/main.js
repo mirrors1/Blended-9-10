@@ -19,11 +19,13 @@
 //   taskText,
 // };
 
-import { handleFormSubmit } from './js/handleFormSubmit';
+import { renderTask } from './js/renderTask';
+import { handleFormSubmit, handleTaskList } from './js/handle';
 
 import { initStorage } from './js/localStorageAPI';
 initStorage();
+renderTask();
 
-const formEl = document.querySelector('#task-form');
-
-formEl.addEventListener('submit', handleFormSubmit);
+import refs from './js/refs';
+refs.form.addEventListener('submit', handleFormSubmit);
+refs.tasksList.addEventListener('click', handleTaskList);

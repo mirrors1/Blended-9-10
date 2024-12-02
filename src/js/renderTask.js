@@ -14,6 +14,5 @@ export function renderTask() {
     )
     .join('');
 
-  refs.tasksList.innerHTML = '';
-  refs.tasksList.insertAdjacentHTML('beforeend', item);
+  refs.tasksList.innerHTML = item;
 }

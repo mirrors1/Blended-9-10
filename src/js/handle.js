@@ -1,5 +1,8 @@
 import { nanoid } from 'nanoid';
-import { addTaskToLocalStorage } from './localStorageAPI';
+import {
+  addTaskToLocalStorage,
+  removeTaskToLocalStorage,
+} from './localStorageAPI';
 import { renderTask } from './renderTask';
 
 export function handleFormSubmit(evt) {
@@ -13,5 +16,15 @@ export function handleFormSubmit(evt) {
   const newTask = { id: nanoid(), taskName, taskText };
   addTaskToLocalStorage(newTask);
   evt.currentTarget.reset();
+  renderTask();
+}
+
+export function handleTaskList(evt) {
+  evt.preventDefault();
+  if (!evt.target.classList.contains('task-list-item-btn')) {
+    return;
+  }
+  const id = evt.target.dataset.id;
+  removeTaskToLocalStorage(id);
   renderTask();
 }
