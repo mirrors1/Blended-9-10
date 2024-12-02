@@ -25,7 +25,7 @@ const TASK_KEY = 'tasks';
 export function initStorage() {
   const value = getTaskFromLocalStorage();
 
-  if (!value.length) {
+  if (!value) {
     localStorage.setItem(TASK_KEY, JSON.stringify(sampleTasks)); //sample tasks
     // localStorage.setItem(TASK_KEY, JSON.stringify([]));//default
   }
